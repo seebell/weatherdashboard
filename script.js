@@ -2,6 +2,7 @@
 var currentCity = "";
 var searchHistory = [];
 var savedCities = JSON.parse(sessionStorage.getItem("userSearches"));
+var apiKey = '&appid=0ac9cb995d5f79715638857ea68fa207';
 
 $(document).ready(function () {
     // past searches to html
@@ -14,7 +15,6 @@ $(document).ready(function () {
             }
             currentCity = searchHistory[searchHistory.length - 1];
 
-            //tried to create as buttons 
             //     var cityBtn = <button type="button" class="btn btn-outline-primary btn-block" id="city" data-name="${searchHistory[i]}">${searchHistory[i]}</button>   
 
             //     $(".pastCities").append('<li>' + cityBtn + '</li>');
