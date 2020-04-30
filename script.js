@@ -130,8 +130,8 @@ $(document).ready(function () {
         event.preventDefault();
         currentCity = $("#userSearch").val();
         $("#userSearch").val('');
-        const queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + currentCity + "&units=imperial&appid=0ac9cb995d5f79715638857ea68fa207";
-        const queryURLCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + currentCity + "&units=imperial&appid=0ac9cb995d5f79715638857ea68fa207";
+        var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + currentCity + "&units=imperial&appid=0ac9cb995d5f79715638857ea68fa207";
+        var queryURLCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + currentCity + "&units=imperial&appid=0ac9cb995d5f79715638857ea68fa207";
         // call for user input
         $.ajax({
             url: queryURLCurrent,
@@ -140,9 +140,9 @@ $(document).ready(function () {
 
             $('#currentCityJumbo').text(response.name + ", " + response.sys.country + " (" + moment().format('dddd MMMM Do') + ")");
             //assign variables for the UV index
-            const lat = response.coord.lat;
-            const lon = response.coord.lon;
-            const uvQueryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=0ac9cb995d5f79715638857ea68fa207&lat=" + lat + "&lon=" + lon;
+            var lat = response.coord.lat;
+            var lon = response.coord.lon;
+            var uvQueryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=0ac9cb995d5f79715638857ea68fa207&lat=" + lat + "&lon=" + lon;
             $('#currentWind').text("Wind Speed: " + response.wind.speed + " MPH");
             $('#currentHum').text("Humidity: " + response.main.humidity + "%");
             $('#currentTemp').text("Temperature: " + response.main.temp + " ˚F");
