@@ -11,21 +11,14 @@ $(document).ready(function () {
         if (savedCities !== null) {
             searchHistory = savedCities;
             for (var i = 0; i < searchHistory.length; i++) {
-                $(".pastCities").prepend('<li>' + searchHistory[i] + '</li>');
+                $(".pastCities").prepend('<li>' + searchHistory[i] + '</li>');   
+                // var a=$("<button>");
+                // a.attr("data-name", savedCities[i]);
+                // a.text(savedCities[i]);
+
+                // $(".pastCities").prepend('<li>' + a + '</li>');
             }
             currentCity = searchHistory[searchHistory.length - 1];
-
-            //     var cityBtn = <button type="button" class="btn btn-outline-primary btn-block" id="city" data-name="${searchHistory[i]}">${searchHistory[i]}</button>   
-
-            //     $(".pastCities").append('<li>' + cityBtn + '</li>');
-            //     $(document).on('click', '#city', function() {
-            //         city = $(this).attr('data-name');
-            //     displayCities();})    
-            // }
-
-
-            //     $(".pastCities").append('<li>' + cityBtn + '</li>');
-
 
         }
     };
