@@ -1,7 +1,7 @@
 // set variables
 var currentCity = "";
 var searchHistory = [];
-var savedCities = JSON.parse(sessionStorage.getItem("userSearches"));
+var savedCities = JSON.parse(localStorage.getItem("userSearches"));
 var apiKey = '&appid=0ac9cb995d5f79715638857ea68fa207';
 
 $(document).ready(function () {
@@ -12,11 +12,11 @@ $(document).ready(function () {
             searchHistory = savedCities;
             for (var i = 0; i < searchHistory.length; i++) {
                 $(".pastCities").prepend('<li>' + searchHistory[i] + '</li>');   
-                // var a=$("<button>");
-                // a.attr("data-name", savedCities[i]);
-                // a.text(savedCities[i]);
+                // var cityBtn=$("<button>");
+                // a.attr("data-name", searchHistory[i]);
+                // a.text(savedHistory[i]);
 
-                // $(".pastCities").prepend('<li>' + a + '</li>');
+                // $(".pastCities").prepend('<li>' + cityBtn + '</li>');
             }
             currentCity = searchHistory[searchHistory.length - 1];
 
@@ -114,8 +114,8 @@ $(document).ready(function () {
     //storage function
     function refreshStorage(name) {
         searchHistory.push(name);
-        sessionStorage.setItem("userSearches", JSON.stringify(searchHistory));
-        savedCities = JSON.parse(sessionStorage.getItem("userSearches"));
+        localStorage.setItem("userSearches", JSON.stringify(searchHistory));
+        savedCities = JSON.parse(localStorage.getItem("userSearches"));
         displayCities();
     }
     //listening for the search button click & push input to storage
