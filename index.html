@@ -10,6 +10,7 @@
     <div class="jumbotron" style="background-color: skyblue"; >
         <div class="container">
         <h1 class="h1" style="text-align: center; background-color: skyblue; color: white;">Weather Dashboard</h1>
+        </div>
     </div>
     <div id="search-div" class="input-group">
         <input type="text" id="userSearch" placeholder="City" class="form-control" />
@@ -17,6 +18,27 @@
     <button class="btn btn-primary city-btn search" input type="submit" value="Search" id="searchBtn" style="background-color: #50c0e9;">Search</button>
         </span>
     </div>
+    <section id="services">
+        <div class="row">
+            <div class="col-md-12 text-center"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-question fa-stack-1x fa-inerse"></i></span>
+                <h3 id="current">Current forecast for:</h3>
+                <div class="userSearch">
+
+                    <h3 id="currentCityJumbo">City:</h3>
+                    <img id="currentIcon">
+                    <div id="jumbotronText">
+                        <h6 id="currentTemp" style="margin-bottom: 10px;">Current Temprature:</h6>
+                        <h6 id="currentHum" style="margin-bottom: 10px;">Current Humidity</h6>
+                        <h6 id="currentWind" style="margin-bottom: 10px;">Current Wind Speed</h6>
+                        <h6 id="uvIndex" style="margin-bottom: 10px;">UV Index: </h6>
+                        <h6 id="currentUV" style="margin-bottom: 10px;"></h6>  
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>   
+        </div>
+    </section>
+        
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>   
 </body>
