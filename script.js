@@ -1,4 +1,4 @@
-// set a few variables
+// set variables
 var currentCity = "";
 var searchHistory = [];
 var savedCities = JSON.parse(sessionStorage.getItem("userSearches"));
@@ -31,9 +31,9 @@ $(document).ready(function () {
     };
     displayCities();
 
-    // variables for the API's
-    const queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + currentCity + "&units=imperial&appid=0ac9cb995d5f79715638857ea68fa207";
-    const queryURLCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + currentCity + "&units=imperial&appid=0ac9cb995d5f79715638857ea68fa207";
+    
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + currentCity + "&units=imperial&appid=0ac9cb995d5f79715638857ea68fa207";
+    var queryURLCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + currentCity + "&units=imperial&appid=0ac9cb995d5f79715638857ea68fa207";
 
 
     //call grabbing current weather & assigning variables to UV requirements for that call
@@ -44,7 +44,7 @@ $(document).ready(function () {
         // more variables required for the UV index & URL
         var lat = response.coord.lat;
         var lon = response.coord.lon;
-        const uvQueryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=0ac9cb995d5f79715638857ea68fa207=" + lat + "&lon=" + lon;
+        var uvQueryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=0ac9cb995d5f79715638857ea68fa207=" + lat + "&lon=" + lon;
         $('#currentCityJumbo').text(response.name + ", " + response.sys.country + " (" + moment().format('dddd MMMM Do') + ")");
         $('#currentWind').text("Wind Speed: " + response.wind.speed + " MPH");
         $('#currentHum').text("Humidity: " + response.main.humidity + "%");
