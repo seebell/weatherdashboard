@@ -18,28 +18,28 @@ $(document).ready(function () {
                   cityBtn.attr("data-name", searchHistory[i]);
                   cityBtn.addClass("cityBtn");
                   cityBtn.text(searchHistory[i]);
-
+                  
                   $(".pastCities").prepend(cityBtn);
                 
             }
-            currentCity = searchHistory[searchHistory.length - 1];
+             currentCity = searchHistory[searchHistory.length - 1];
 
         }
     };
     displayCities();
     $(".cityBtn").on("click", function() {
         console.log("test");
+        console.log($(this).text());
+        currentCity = $(this).text();
+        
      localStorage.getItem("userSearches")   
      currentWeather();
      });
 
-    
-    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + currentCity + "&units=imperial&appid=0ac9cb995d5f79715638857ea68fa207";
-    var queryURLCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + currentCity + "&units=imperial&appid=0ac9cb995d5f79715638857ea68fa207";
-
-
     //call grabbing current weather & assigning variables to UV requirements for that call
     function currentWeather (){
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + currentCity + "&units=imperial&appid=0ac9cb995d5f79715638857ea68fa207";
+    var queryURLCurrent = "https://api.openweathermap.org/data/2.5/weather?q=" + currentCity + "&units=imperial&appid=0ac9cb995d5f79715638857ea68fa207";
     $.ajax({
         url: queryURLCurrent,
         method: "GET"
