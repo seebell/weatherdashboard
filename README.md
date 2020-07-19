@@ -1,8 +1,6 @@
-Weather Dashboard
+# Weather Dashboard
 
-https://seebell.github.io/weatherdashboard/
-
-WeatherAPI
+This is an app that would let the user see the weather forecast for the next 5 days in any city they search. It's using the Weather API to get the accurate results
 
 ## User Story
 
@@ -12,7 +10,7 @@ I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
 ```
 
-## Acceptance Criteria
+## Description
 
 ```
 GIVEN a weather dashboard with form inputs
@@ -30,17 +28,11 @@ WHEN I open the weather dashboard
 THEN I am presented with the last searched city forecast
 ```
 
-The following image demonstrates the application functionality:
+## Screenshot
+![](https://github.com/seebell/seebell.github.io/blob/master/assets/images/wd.jpg
+)<br>
 
-![weather dashboard demo](./Assets/06-server-side-apis-homework-demo.png)
 
-## Review
+## Link for the deployed app
 
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+https://seebell.github.io/weatherdashboard/
