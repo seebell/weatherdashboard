@@ -3,6 +3,7 @@ Weather Dashboard
 https://seebell.github.io/weatherdashboard/
 
 WeatherAPI
+
 ## User Story
 
 ```
